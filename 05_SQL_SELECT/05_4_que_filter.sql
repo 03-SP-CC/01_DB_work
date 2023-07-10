@@ -13,10 +13,10 @@
 /*
 SELECT
 	ticker AS "SYM",
-    c_name AS "Unternehmen",
+    #c_name AS "Unternehmen",
 	price AS "Kurs ($)",
     payouts AS "Zahlung p.a.",
-    dividend AS "Dividende",
+    #dividend AS "Dividende",
 	CONCAT(sector, " | ", industry) AS "Operations"
 FROM stocks.ccc
 
@@ -31,7 +31,7 @@ FROM stocks.ccc
 -- Kombination durch AND / OR
 #WHERE sector = "Communication Services" AND (industry = "Entertainment" OR industry = "Media")
 -- Kombination durch AND / NOT
-WHERE sector = "Communication Services" AND NOT industry = "Media"
+#WHERE sector = "Communication Services" AND NOT industry = "Media"
 
 -- Sortierung
 ORDER BY industry DESC 
@@ -72,7 +72,7 @@ FROM stocks.ccc
 
 #WHERE industry LIKE "%ment"
 #WHERE industry LIKE "%ment" AND industry NOT LIKE "%ipment"
-WHERE industry LIKE "%ment" AND industry NOT LIKE "%ipment" AND industry NOT LIKE "%tain%"
+#WHERE industry LIKE "%ment" AND industry NOT LIKE "%ipment" AND industry NOT LIKE "%tain%"
 
 
 ORDER BY industry ASC
@@ -106,11 +106,13 @@ SELECT
 FROM stocks.ccc
 #WHERE c_name RLIKE "^[AZ]"  -- mit A oder Z beginnend
 WHERE c_name RLIKE "^[1-9]"  -- mit Ziffer beginnend
-ORDER BY c_name;
+ORDER BY c_name
+;
 */
 
+
 -- Eingrenzen/Filtern WHERE & BETWEEN / NOT BETWEEN
-/**/
+/*
 SELECT 
     ticker AS "SYM",
     c_name AS "Unternehmen",
@@ -126,7 +128,7 @@ WHERE sector = "Financials" AND NOT (price BETWEEN 20.0 AND 250.0) -- Band rausf
 ORDER BY price DESC
 LIMIT 200 -- X Zeilen ab 0
 ;
-
+*/
 
 
 
