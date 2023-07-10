@@ -43,7 +43,7 @@ LIMIT 1
 */
 
 -- Welches Unternehmen hat die längste Div.-Historie ?
-/**/
+/*
 SELECT
     ticker AS "SYM",
     c_name AS Unternehmen,
@@ -52,6 +52,8 @@ FROM stocks.ccc
 ORDER BY no_yrs DESC
 LIMIT 1
 ;
+*/
+
 
 
 
